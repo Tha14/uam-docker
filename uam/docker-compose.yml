@@ -17,11 +17,12 @@ services:
     volumes:
       - "./entrypoint.sh:/opt/entrypoint.sh"
       - "/opt/uam_data:/root/.uam"
-    command: /bin/sh -c "chmod +x /opt/entrypoint.sh && /opt/entrypoint.sh $${PBKEY} $${NETLIMUP} $${NETLIMDOWN}"
+    command: /bin/sh -c "chmod +x /opt/entrypoint.sh && /opt/entrypoint.sh $${PBKEY} $${NETLIMUP} $${NETLIMDOWN} $${ENABLE_WONDERSHAPER}"
     ports:
       - "127.0.0.1:17099:17099"
       - "4156:4156"
     environment:
       - PBKEY=${PBKEY?err}
+      - ENABLE_WONDERSHAPER=true
       - NETLIMUP=10000
       - NETLIMDOWN=18000
