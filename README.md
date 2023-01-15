@@ -1,5 +1,6 @@
 # Run UAM in a Docker container
-[![run-docker-compose-workflow](https://github.com/Tha14/uam-docker/actions/workflows/push.yml/badge.svg)](https://github.com/Tha14/uam-docker/actions/workflows/push.yml)
+[![Donate CRP](https://img.shields.io/badge/Donate-CRP-blue.svg)](https://cutt.ly/C2MoaCU) [![run-docker-compose-workflow](https://github.com/Tha14/uam-docker/actions/workflows/push.yml/badge.svg)](https://github.com/Tha14/uam-docker/actions/workflows/push.yml)
+##### If you find this project helpful you are welcome to make a donation.
 
 ## How to use:
 ### Single UAM instance
@@ -25,3 +26,5 @@
 3. Make sure you port forward manually as upnp will most likely not work.
 4. You can adjust the maximum upload and download bandwidth of uam by changing the `NETLIMUP` and `NETLIMDOWN` env variables.
 5. I suggest using [lazydocker](https://github.com/jesseduffield/lazydocker) to control and see the status of your containers.
+6. You can disable wondershaper(traffic shaping) if you're experiencing problems by setting `ENABLE_WONDERSHAPER` to `false`.
+
